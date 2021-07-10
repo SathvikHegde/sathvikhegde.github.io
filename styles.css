@@ -16,27 +16,41 @@ header {
     background-position: center;
 }
 
-section {
+header .mobile {
+    display: none;
+}
+
+.images {
     background: white;
     color: gray;
     padding: 20px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
-div {
-    background: red;
+.images figure {
+    text-transform: uppercase;
     margin: auto;
     width: 100px;
+    text-align: center;
 }
 
-ul {
+.images figure img {
+    border: 1px solid white;
+    box-shadow: grey 0 0 10px;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+nav ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
 
-li {
+nav li {
     display: inline-block;
     margin-right: 20px;
 }
@@ -67,5 +81,21 @@ header .logo a {
 
 footer {
     background: black;
-    padding: 10px 20px;
+    color: grey;
+    text-align: center;
+    font-size: 12px;
+    padding: 20px 20px;
 }
+
+@media screen and (max-width: 715px) {
+    header {
+        height: 200px;
+    }
+    header .mobile {
+        display: inline-block;
+    }
+    header .desktop {
+        display: none;
+    }
+}
+
